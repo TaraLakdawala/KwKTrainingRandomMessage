@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>be inspired.</title>
+  </head>
+  <body>
+      <h1 class = "title">be inspired. inspiration for women.</h1>
+      <p id = "inspiringQuote">need inspiration? click the button to get inspired.</p>
+      <button onclick="pickInspiration()">get inspired!</button>
+
+
+  </body>
+</html>
+
+<style>
+
+  .title {
+    text-align: center;
+    font-family: Courier, monospace;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: lavender;
+    color: darkslategrey;
+  }
+  body {
+    background-color: lavender;
+    font-family: Courier, monospace;
+    color: darkslategrey;
+    font-size: 20px;
+    font-weight: 550;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding: 1em 20px 2em;
+  }
+  button {
+    display: block;
+    margin: auto;
+    padding: 12px 18px;
+    border: 5px solid darkslategrey;
+    background: lavender;
+    color: darkslategrey;
+    font-family: Courier, monospace;
+    font-size: 15px;
+    font-weight: 550;
+  }
+
+  @media only screen and (max-width: 768px) {
+      .title {
+        text-align: center;
+        font-family: Courier, monospace;
+        font-size: 25px;
+        font-weight: 600;
+        background-color: lavender;
+        color: darkslategrey;
+      }
+      body {
+        background-color: lavender;
+        font-family: Courier, monospace;
+        color: darkslategrey;
+        font-size: 20px;
+        font-weight: 550;
+        text-align: center;
+        margin-top: 30px;
+        margin-right: 100px;
+        margin-left: 100px;
+        padding: 1em 20px 2em;
+      }
+      button {
+        display: block;
+        margin: auto;
+        padding: 12px 18px;
+        border: 5px solid darkslategrey;
+        background: lavender;
+        color: darkslategrey;
+        font-family: Courier, monospace;
+        font-size: 15px;
+        font-weight: 550;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+      .title {
+        text-align: center;
+        font-family: Courier, monospace;
+        font-size: 25px;
+        font-weight: 600;
+        background-color: lavender;
+        color: darkslategrey;
+      }
+      body {
+        background-color: lavender;
+        font-family: Courier, monospace;
+        color: darkslategrey;
+        font-size: 20px;
+        font-weight: 550;
+        text-align: center;
+        margin-top: 30px;
+        margin-right: 100px;
+        margin-left: 100px;
+        padding: 1em 20px 2em;
+      }
+      button {
+        display: block;
+        margin: auto;
+        padding: 12px 18px;
+        border: 5px solid darkslategrey;
+        background: lavender;
+        color: darkslategrey;
+        font-family: Courier, monospace;
+        font-size: 15px;
+        font-weight: 550;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+
+      .title {
+        text-align: center;
+        font-family: Courier, monospace;
+        font-size: 25px;
+        font-weight: 600;
+        background-color: lavender;
+        color: darkslategrey;
+      }
+      body {
+        background-color: lavender;
+        font-family: Courier, monospace;
+        color: darkslategrey;
+        font-size: 20px;
+        font-weight: 550;
+        text-align: center;
+        margin-top: 30px;
+        margin-right: 100px;
+        margin-left: 100px;
+        padding: 1em 20px 2em;
+      }
+      button {
+        display: block;
+        margin: auto;
+        padding: 12px 18px;
+        border: 5px solid darkslategrey;
+        background: lavender;
+        color: darkslategrey;
+        font-family: Courier, monospace;
+        font-size: 15px;
+        font-weight: 550;
+      }
+    }
+  }
+
+</style>
+
+<script>
+
+  quotes = ["“Women are like teabags. We don’t know our true strength until we are in hot water.” – Eleanor Roosevelt",
+  "“I’m tough, ambitious and I know exactly what I want. If that makes me a bitch, Okay.” – Madonna",
+  "“Some women choose to follow men, and some choose to follow their dreams. If you’re wondering which way to go, remember that your career will never wake up and tell you that it doesn’t love you anymore.” – Lady Gaga",
+  "“I am a woman with thoughts and questions and shit to say. I say if I’m beautiful. I say if I’m strong. You will not determine my story – I will.” – Amy Schumer",
+  "“Strong women don’t play the victim. Don’t make themselves look pitiful and don’t point fingers. They stand and they deal.” – Mandy Hale",
+  "“And one day she discovered that she was fierce and strong, and full of fire and that not even she could hold herself back because her passion burned brighter than her fears.” – Mark Anthony",
+  "“Take criticism seriously, but not personally. If there is truth or merit in the criticism, try to learn from it. Otherwise, let it roll right off you.” — Hillary Clinton",
+  "“I love to see a young girl go out and grab the world by the lapels. Life’s a bitch. You’ve got to go out and kick ass.”— Maya Angelou",
+  "“We realize the importance of our voices only when we are silenced.” — Malala Yousafzai",
+  "“One of the most courageous things you can do is identify yourself, know who you are, what you believe in and where you want to go.”– Sheila Murray Bethel",
+  "“The most common way people give up their power is by thinking they don’t have any.”– Alice Walker",
+  "“Doubt is a killer. You just have to know who you are and what you stand for.” – Jennifer Lopez",
+  "“If you look at what you have in life, you’ll always have more. If you look at what you don’t have in life, you’ll never have enough.”– Oprah Winfrey",
+  "“You have to have confidence in your ability, and then be tough enough to follow through.”– Rosalynn Carter",
+  "If it’s a good idea, go ahead and do it. It’s much easier to apologize than it is to get permission.”— Grace Hopper"]
+
+  function pickInspiration() {
+    var random = Math.random() * 15;
+    var rounded = Math.floor(random);
+    var inspiration = quotes[rounded];
+    document.getElementById("inspiringQuote").innerHTML = inspiration;
+
+}
+</script>
